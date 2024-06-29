@@ -1,1 +1,1 @@
-console.log('Hello World!');
+console.log('Finalizada as configurações de ambiente!');
