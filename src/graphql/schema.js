@@ -1,10 +1,10 @@
 import { gql } from 'apollo-server-core';
-import { userTypeDefs } from './user/typedefs';
-import { userResolvers } from './user/resolvers';
-import { postTypeDefs } from './post/typedefs';
-import { postResolvers } from './post/resolvers';
+import { userTypeDefs } from './user/typedefs.js';
+import { userResolvers } from './user/resolvers.js';
+import { postTypeDefs } from './post/typedefs.js';
+import { postResolvers } from './post/resolvers.js';
 
-export const rootTypeDefs = gql`
+const rootTypeDefs = gql`
   type Query {
     _empty: Boolean
   }

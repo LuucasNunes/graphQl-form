@@ -1,24 +1,12 @@
-const user = () => {
-  return {
-    id: 'NH2030',
-    userName: 'Alice ',
-  };
+const user = async (_, { id }, { getUsers }) => {
+  const response = await getUsers('/' + id);
+  const user = await response.json();
+  return user;
 };
-const users = () => {
-  return [
-    {
-      id: 'AX400',
-      userName: 'Kara detroit',
-    },
-    {
-      id: 'XJ360',
-      userName: 'Markus detroit',
-    },
-    {
-      id: 'TK700',
-      userName: 'Connor detroit',
-    },
-  ];
+
+const users = async (_, __, { getUsers }) => {
+  const users = await getUsers();
+  return users.json();
 };
 
 export const userResolvers = {
